@@ -53,6 +53,8 @@
 (%more)
 
 
+(begin (display "Is Telemachus computer literate --> ") (%which () (%computer-literate 'Telemachus)))
+
 
 
 
