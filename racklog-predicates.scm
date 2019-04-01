@@ -55,6 +55,11 @@
 
 (begin (display "Is Telemachus computer literate --> ") (%which () (%computer-literate 'Telemachus)))
 
+(%which (things-known)
+    (%let (someone x)
+      (%bag-of x (%knows someone x)
+               things-known)))
+
 
 
 
