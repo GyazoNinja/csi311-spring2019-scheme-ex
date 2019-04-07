@@ -1,7 +1,13 @@
 
 #lang racket
 
+; basic sanity test - racklog is installed 
+
+; import racket's prolog package 
 (require racklog)
 
-(%which () %true)
+; assert true 
+(%which () %true)   ; should print the empty list
+
+
 
