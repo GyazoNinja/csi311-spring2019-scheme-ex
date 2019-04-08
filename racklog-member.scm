@@ -8,8 +8,8 @@
 ; front of the list of which x is a member 
 (define %member
   (%rel (x xs)
-    [(x (cons x (_)))]
-    [(x (cons (_) xs))
+    [(x (cons x (_)))]    ; for any x, x is a member of the list if x is on the front of the list 
+    [(x (cons (_) xs))    ; x is a member of a list if we can show that it is a member of the tail of that list
       (%member x xs)]))
 
 ; will bind x to each element of the list in turn 
