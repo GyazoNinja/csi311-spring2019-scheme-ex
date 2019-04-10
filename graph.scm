@@ -7,6 +7,7 @@
 ; raco pkg install graph
 ; see here: https://stackoverflow.com/questions/34852667/installing-packages-in-racket
 
+; provides us the weighted-graph/undirected object and the algorithms bfs and dijkstra
 (require graph)
 
 ; define a weighted graph
@@ -20,6 +21,13 @@
 (add-edge! relations 'a 'c 10)
 (add-edge! relations 'c 'f 20)
 (add-edge! relations 'f 'g 30)
+
+
+; In the below, the (first second) construct is because the bfs and dijkstra algorithms return more than one result.
+; (A function that returns more than one thing... well.. think of it like returning a struct.)
+; We're only interested generally in the "first" result.
+; See the documentation for the graph library.  
+ 
 
 ; Do a breadth first search to count hops from a source node.  Display the number of hops of the source node to each other node.
 (let-values ( [ (first second) (bfs relations 'd) ] )
