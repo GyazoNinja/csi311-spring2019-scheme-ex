@@ -1,8 +1,7 @@
 
 #lang racket
 
-(require racklog)
-
+(require racklog) 
 
 (define %factorial
   (%rel (x y x1 y1)
@@ -13,11 +12,12 @@
            (%is y (* y1 x))]))
 
 
-(%which () (%factorial 0 1))
+(%which ()
+    (%factorial 0 1))
 
-(%which () (%factorial -1 1))
+(%more)
 
-(%which () (%factorial 5 120))
-(%which () (%factorial 5 121))
 
+(%which ()
+    (%factorial -1 1))
 
